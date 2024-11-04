@@ -1,0 +1,34 @@
+﻿Module Module1
+    Sub Main()
+        ' Example usage of Person class
+        Dim person1 As New Person()
+        person1.DisplayInfo()
+
+        Dim person2 As New Person("Tomba", 20)
+        person2.DisplayInfo()
+    End Sub
+End Module
+
+Public Class Person
+    Private name As String
+    Private age As Integer
+
+    ' Default Constructor
+    Public Sub New()
+        name = "Unknown"
+        age = 0
+        Console.WriteLine("Default Constructor Called")
+    End Sub
+
+    ' Parameterized Constructor
+    Public Sub New(ByVal name As String, ByVal age As Integer)
+        Me.name = name
+        Me.age = age
+        Console.WriteLine("Parameterized Constructor Called")
+    End Sub
+
+    ' Method to display information
+    Public Sub DisplayInfo()
+        Console.WriteLine($"Name: {name}, Age: {age}")
+    End Sub
+End Class
